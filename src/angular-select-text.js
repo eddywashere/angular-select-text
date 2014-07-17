@@ -23,9 +23,9 @@ angular.module('angular-select-text', []).
     return {
       restrict: 'A',
       link: function(scope, element, attrs){
-        if(selectElement){
-          element.bind('click', selectElement(element));
-        }
+        element.bind('click', function(){
+          selectElement(element);
+        });
       }
     };
   });
