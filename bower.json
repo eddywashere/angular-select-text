@@ -1,11 +1,11 @@
 {
   "name": "angular-select-text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     "Eddy Hernandez <eddy.hernandez@rackspace.com>"
   ],
   "description": "Angular.js directive for selecting text content.",
-  "main": "angular-select-text.js",
+  "main": "src/angular-select-text.js",
   "keywords": [
     "angular",
     "select",
@@ -20,6 +20,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "angular": ">=1"
+    "angular": ">=1",
+    "angular-mocks": "~1.2.20"
   }
 }
