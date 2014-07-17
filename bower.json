@@ -1,6 +1,6 @@
 {
   "name": "angular-select-text",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "authors": [
     "Eddy Hernandez <eddy.hernandez@rackspace.com>"
   ],
@@ -17,7 +17,10 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components"
+    "bower_components",
+    "test",
+    "karma.conf.js",
+    "package.json"
   ],
   "dependencies": {
     "angular": ">=1",
