@@ -11,3 +11,11 @@ Angular.js directive for selecting text content.
 ```html
 <code select-text>Clicking this code block selects the entire text within the code block</code>
 ```
+
+### Running Tests
+
+```
+npm install -g grunt-cli bower
+bower install
+npm test
+```
