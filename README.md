@@ -2,7 +2,13 @@
 
 [![Build Status](https://travis-ci.org/eddywashere/angular-select-text.svg?branch=master)](https://travis-ci.org/eddywashere/angular-select-text)
 
-Angular.js directive for selecting text content.
+Angular.js directive for selecting text content on click. 
+
+### Why? 
+
+- It's not possible to do a javascript only copy to clipboard. 
+- Some people prefer __not to add flash__ to their site to enable copy to clipboard.
+- The next best thing is to make it easier to select a block of content with 1 simple click
 
 ### [DEMO](http://jsbin.com/nobix/1/edit)
 
