@@ -7,7 +7,7 @@
   "description": "Angular.js directive for selecting text content.",
   "main": "angular-select-text.js",
   "scripts": {
-    "test": "karma start --single-run --no-auto-watch"
+    "test": "./node_modules/.bin/karma start --browsers Firefox --single-run"
   },
   "repository": {
     "type": "git",
