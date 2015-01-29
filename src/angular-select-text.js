@@ -6,18 +6,18 @@ angular.module('angular-select-text', []).
   directive('selectText', ['$window', function ($window) {
     var selectElement;
 
-    if ($window.document.selection) {
-      selectElement = function(element) {
+    if ($window.document.body.createTextRange) {
+      selectElement = function (element) {
         var range = $window.document.body.createTextRange();
         range.moveToElementText(element[0]);
         range.select();
       };
-    } else if ($window.getSelection) {
-      selectElement = function(element) {
+    } else {
+      selectElement = function (element) {
         var range = $window.document.createRange();
         range.selectNode(element[0]);
         $window.getSelection().addRange(range);
-      };
+     };
     }
 
     return {
