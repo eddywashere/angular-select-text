@@ -3,7 +3,7 @@
  * angular-select-text directive
  */
 angular.module('angular-select-text', []).
-  directive('selectText', ['$window', function ($window) {
+  directive('selectText', function ($window) {
     var selectElement;
 
     if ($window.document.selection) {
@@ -28,4 +28,4 @@ angular.module('angular-select-text', []).
         });
       }
     };
-  }]);
+  });
