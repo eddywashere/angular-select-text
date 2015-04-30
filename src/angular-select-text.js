@@ -17,7 +17,7 @@ angular.module('angular-select-text', []).
         var range = $window.document.createRange();
         range.selectNode(element[0]);
         $window.getSelection().addRange(range);
-     };
+      };
     }
 
     return {
