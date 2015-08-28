@@ -20,6 +20,6 @@ module.exports = function(config) {
     ],
 
     autoWatch: true,
-    browsers: ['Chrome']
+    browsers: ['Chrome', 'Firefox']
   });
 };
