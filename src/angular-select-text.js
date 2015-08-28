@@ -23,15 +23,12 @@ angular.module('angular-select-text', []).
   directive('selectText', ['selectElement', function (selectElement) {
     return {
       restrict: 'A',
-      controller: ['$scope', function($scope) {
-        this.register = function(callback) {
-          $scope.callback = callback;
-        };
-      }],
-      link: function(scope, element, attrs){
+      require: 'selectText',
+      controller: [function() {}],
+      link: function(scope, element, attrs, selectText){
         element.bind('click', function(){
-          if (scope.callback)
-            scope.callback();
+          if (selectText.callback)
+            selectText.callback();
           else
             selectElement(element);
         });
@@ -44,8 +41,11 @@ angular.module('angular-select-text', []).
       restrict: 'A',
       require: '^selectText',
       link: function(scope, element, attrs, selectText) {
-        selectText.register(function() {
+        selectText.callback = function() {
           selectElement(element);
+        };
+        scope.$on('$destroy', function() {
+          selectText.callback = null;
         });
       }
     };
